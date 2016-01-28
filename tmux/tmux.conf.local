@@ -1,0 +1,32 @@
+# Resize pane shortcuts
+bind -r H resize-pane -L 10
+bind -r J resize-pane -D 10
+bind -r K resize-pane -U 10
+bind -r L resize-pane -R 10
+
+# use mouse
+setw -g mode-mouse off
+set -g mouse-select-pane off
+set -g mouse-resize-pane off
+set -g mouse-select-window off
+
+# change default timeout
+set -sg escape-time 1
+
+# change base pane index
+setw -g pane-base-index 1
+
+# set default shell
+set -g default-command /bin/zsh
+set -g default-shell /bin/zsh
+
+# [sudo] pip install git+git://github.com/powerline/powerline
+if-shell 'test -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf'
+
+# install tmux-resurrect with tmux plugin manager
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
