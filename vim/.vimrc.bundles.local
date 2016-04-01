@@ -1,0 +1,7 @@
+UnBundle 'spf13/vim-colors'
+"Bundle 'tmux-plugins/vim-tmux'
+UnBundle 'briancollins/vim-jst'
+UnBundle 'kchmck/vim-coffee-script'
+Bundle 'mxw/vim-jsx'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'huangguozhen/vim-babel-snippets'
